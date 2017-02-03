@@ -38,6 +38,10 @@ T queue<T>::dequeue() {
 		end = end->prev;
 		delete tmp;
 		size--;
+		if (size == 0) {
+			start = nullptr;
+			end = nullptr;
+		}
 		return data;
 	}
 }
